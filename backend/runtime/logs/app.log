@@ -1,0 +1,1767 @@
+2016-04-17 05:45:32 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'minhdoandb.user' doesn't exist' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php:840
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(840): PDOStatement->execute()
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\common\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'minhdoandb.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='admin') AND (`status`=10)' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(855): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\common\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'minhdoandb.user' doesn't exist
+)
+
+2016-04-17 05:45:32 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'MjRyQTRqM00KfSIsXjpCCGJVSjZeW2QhflBGLmw9cSFCUBQGDTpeew=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '197'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50006'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460864732.625
+    'REQUEST_TIME' => 1460864732
+]
+2016-04-17 05:46:12 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "gioithieu/index".' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('gioithieu/index', Array)
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-17 05:46:12 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'gioithieu/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50014'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gioithieu/index'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=gioithieu/index'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460864772.259
+    'REQUEST_TIME' => 1460864772
+]
+2016-04-17 05:49:09 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'minhdoandb.user' doesn't exist' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php:840
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(840): PDOStatement->execute()
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\common\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'minhdoandb.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='admin') AND (`status`=10)' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(855): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\common\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\common\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'minhdoandb.user' doesn't exist
+)
+
+2016-04-17 05:49:09 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'SmRMVWtuZnlyLRw4AT4XPBoFdCIBXzEVBgB4OjM5JBU6ACoSUj4LTw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50052'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460864949.15
+    'REQUEST_TIME' => 1460864949
+]
+2016-04-17 06:02:01 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\models\User' not found' in E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php:73
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-17 06:02:01 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'OVZFYlJib3kBHxUPODIePGk3fRU4UzgVdTJxDQo1LRVJMiMlazICTw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50201'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460865721.845
+    'REQUEST_TIME' => 1460865721
+]
+2016-04-17 06:03:38 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\User' in file: E:\Study\xampp\htdocs\minhdoan/backend/models/User.php. Namespace missing?' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\models\...')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(73): spl_autoload_call('backend\models\...')
+#2 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(44): backend\models\LoginForm->getUser()
+#3 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#8 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#14 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-17 06:03:38 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'OVZFYlJib3kBHxUPODIePGk3fRU4UzgVdTJxDQo1LRVJMiMlazICTw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50205'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460865818.672
+    'REQUEST_TIME' => 1460865818
+]
+2016-04-17 06:03:41 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\User' in file: E:\Study\xampp\htdocs\minhdoan/backend/models/User.php. Namespace missing?' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\models\...')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(73): spl_autoload_call('backend\models\...')
+#2 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(44): backend\models\LoginForm->getUser()
+#3 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#8 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#14 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-17 06:03:41 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'OVZFYlJib3kBHxUPODIePGk3fRU4UzgVdTJxDQo1LRVJMiMlazICTw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50206'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460865821.821
+    'REQUEST_TIME' => 1460865821
+]
+2016-04-17 06:03:54 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\models\User' in file: E:\Study\xampp\htdocs\minhdoan/backend/models/User.php. Namespace missing?' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\models\...')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(73): spl_autoload_call('backend\models\...')
+#2 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(44): backend\models\LoginForm->getUser()
+#3 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#8 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#14 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-17 06:03:54 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEVraWRyblJcDDsEDiIfFzQkUx4OQzk.KCFfBjwlLD4UIQ0uXSIDZA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50211'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460865834.421
+    'REQUEST_TIME' => 1460865834
+]
+2016-04-17 06:06:38 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php:840
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(840): PDOStatement->execute()
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(73): backend\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(44): backend\models\LoginForm->getUser()
+#8 [internal function]: backend\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='admin') AND (`status`=10)' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(855): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(82): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(73): backend\models\User::findByUsername('<span class="st...')
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(44): backend\models\LoginForm->getUser()
+#8 [internal function]: backend\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), '<span class="st...')
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), '[<span class="s...')
+#12 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#13 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'status' in 'where clause'
+)
+
+2016-04-17 06:06:38 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEVraWRyblJcDDsEDiIfFzQkUx4OQzk.KCFfBjwlLD4UIQ0uXSIDZA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50231'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460865998.693
+    'REQUEST_TIME' => 1460865998
+]
+2016-04-17 06:07:30 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: backend\models\User::password_hash' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('password_hash')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(152): yii\db\BaseActiveRecord->__get('password_hash')
+#2 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(45): backend\models\User->validatePassword('admin')
+#3 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#7 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#8 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#14 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-17 06:07:30 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEVraWRyblJcDDsEDiIfFzQkUx4OQzk.KCFfBjwlLD4UIQ0uXSIDZA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50241'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460866050.38
+    'REQUEST_TIME' => 1460866050
+]
+2016-04-17 06:14:12 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Security.php:636
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(152): yii\base\Security->validatePassword('admin', NULL)
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(45): backend\models\User->validatePassword('admin')
+#2 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#6 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#7 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2016-04-17 06:14:12 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEVraWRyblJcDDsEDiIfFzQkUx4OQzk.KCFfBjwlLD4UIQ0uXSIDZA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50306'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460866452.429
+    'REQUEST_TIME' => 1460866452
+]
+2016-04-17 06:19:19 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Security.php:636
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(152): yii\base\Security->validatePassword('admin', '21232f297a57a5a...')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(45): backend\models\User->validatePassword('admin')
+#2 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#6 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#7 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2016-04-17 06:19:19 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEVraWRyblJcDDsEDiIfFzQkUx4OQzk.KCFfBjwlLD4UIQ0uXSIDZA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50376'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460866759.279
+    'REQUEST_TIME' => 1460866759
+]
+2016-04-17 06:19:29 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Security.php:636
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\backend\models\User.php(152): yii\base\Security->validatePassword('admin', '21232f297a57a5a...')
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(45): backend\models\User->validatePassword('admin')
+#2 [internal function]: backend\models\LoginForm->validatePassword('password', NULL)
+#3 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(backend\models\LoginForm), 'password')
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(backend\models\LoginForm), Array)
+#6 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(58): yii\base\Model->validate()
+#7 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#12 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#13 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2016-04-17 06:19:29 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'dl9sMkpEbDROFjxfIBQdcSY.VEUgdTtYOjtYXRITLlgGOwp1cxQBAg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460866769.716
+    'REQUEST_TIME' => 1460866769
+]
+2016-04-17 07:20:53 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Argument 1 passed to yii\web\User::login() must be an instance of yii\web\IdentityInterface, instance of backend\models\User given, called in E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php on line 59 and defined' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\User.php:238
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\User.php(238): yii\base\ErrorHandler->handleError(4096, 'Argument 1 pass...', 'E:\Study\xampp\...', 238, Array)
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(59): yii\web\User->login(Object(backend\models\User), 2592000)
+#2 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#7 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#8 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-04-17 07:20:53 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'SmVQMkFlbHdyLABfKzUdMhoEaEUrVDsbBgFkXRkyLhs6ATZ1eDUBQQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50655'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460870453.501
+    'REQUEST_TIME' => 1460870453
+]
+2016-04-17 07:23:19 [::1][-][obfot8335aiev0oqal8t3qmrq4][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Argument 1 passed to yii\web\User::login() must be an instance of yii\web\IdentityInterface, instance of backend\models\User given, called in E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php on line 59 and defined' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\User.php:238
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\User.php(238): yii\base\ErrorHandler->handleError(4096, 'Argument 1 pass...', 'E:\Study\xampp\...', 238, Array)
+#1 E:\Study\xampp\htdocs\minhdoan\backend\models\LoginForm.php(59): yii\web\User->login(Object(backend\models\User), 2592000)
+#2 E:\Study\xampp\htdocs\minhdoan\backend\controllers\SiteController.php(68): backend\models\LoginForm->login()
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#7 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#8 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-04-17 07:23:19 [::1][-][obfot8335aiev0oqal8t3qmrq4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'cG0uZU40dDdIJH4IJGQFciAMFhIkBSNbPAkaChZjNlsACUgid2QZAQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50664'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460870599.728
+    'REQUEST_TIME' => 1460870599
+]
+2016-04-17 07:26:06 [::1][1][dja16tm5qk5vb2iudgoj7tj137][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "gioithieu/index".' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('gioithieu/index', Array)
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-17 07:26:06 [::1][1][dja16tm5qk5vb2iudgoj7tj137][info][application] $_GET = [
+    'r' => 'gioithieu/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+    'PHPSESSID' => 'dja16tm5qk5vb2iudgoj7tj137'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => '_csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D; PHPSESSID=dja16tm5qk5vb2iudgoj7tj137'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gioithieu/index'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=gioithieu/index'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460870766.03
+    'REQUEST_TIME' => 1460870766
+]
+2016-04-17 07:26:11 [::1][1][dja16tm5qk5vb2iudgoj7tj137][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "gioithieu".' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('gioithieu', Array)
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\Study\xampp\htdocs\minhdoan\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-17 07:26:11 [::1][1][dja16tm5qk5vb2iudgoj7tj137][info][application] $_GET = [
+    'r' => 'gioithieu'
+]
+
+$_COOKIE = [
+    '_csrf' => '8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6\";}'
+    'PHPSESSID' => 'dja16tm5qk5vb2iudgoj7tj137'
+]
+
+$_SESSION = [
+    'session_lang' => 'vi'
+    '06fa898a540e5ebdd9780b8f333e7df8__returnUrl' => '/occ/admin.php?r=product/admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__id' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__name' => 'admin'
+    '06fa898a540e5ebdd9780b8f333e7df8__states' => []
+    'Yii.CCaptchaAction.6f3e6a84.site.captcha' => 'xfzthof'
+    'Yii.CCaptchaAction.6f3e6a84.site.captchacount' => 1
+    'gii__returnUrl' => '/occ/index.php?r=gii'
+    'gii__id' => 'yiier'
+    'gii__name' => 'yiier'
+    'gii__states' => []
+    'Yii.CCaptchaAction.2e6183fb.site.captcha' => 'womihir'
+    'Yii.CCaptchaAction.2e6183fb.site.captchacount' => 1
+    '57421025af52bb0ea91efeb7ed7ddafc__id' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__name' => 'admin'
+    '57421025af52bb0ea91efeb7ed7ddafc__states' => []
+    '130de22a99a3570fc8407265470a4b17__returnUrl' => '/minhdoan/admin.php?r=thamSo/admin'
+    '__flash' => []
+    '__returnUrl' => '/minhdoan/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => '_csrf=8c2aeec0e003b60388218be02b4af3ebff27ae1b91ccd4a7f4031b5853d0c538a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228IPmjPqEPa8wj1WlLd4oXWBlpdfG9Pm6%22%3B%7D; PHPSESSID=dja16tm5qk5vb2iudgoj7tj137'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/backend/web/index.php'
+    'REMOTE_PORT' => '50677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gioithieu'
+    'REQUEST_URI' => '/minhdoan/backend/web/index.php?r=gioithieu'
+    'SCRIPT_NAME' => '/minhdoan/backend/web/index.php'
+    'PHP_SELF' => '/minhdoan/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460870771.756
+    'REQUEST_TIME' => 1460870771
+]

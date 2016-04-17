@@ -1,0 +1,89 @@
+2016-04-17 05:35:45 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @backend\views\gioi-thieu' in E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2-gii\generators\crud\Generator.php(208): yii\BaseYii::getAlias('@backend\views\...')
+#1 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2-gii\generators\crud\Generator.php(175): yii\gii\generators\crud\Generator->getViewPath()
+#2 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(50): yii\gii\generators\crud\Generator->generate()
+#3 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#4 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('view', Array)
+#7 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('gii/default/vie...', Array)
+#8 E:\Study\xampp\htdocs\minhdoan\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\Study\xampp\htdocs\minhdoan\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-04-17 05:35:44 [::1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf' => 'Rm90LkxfcUtyHwwYAy9Be341DkALDSgGGRtZRAINHQd0KS5gPQYdLA=='
+    'Generator' => [
+        'modelClass' => 'common\\models\\GioiThieu'
+        'searchModelClass' => 'common\\models\\GioiThieuSearch'
+        'controllerClass' => 'backend\\controllers\\GioiThieuController'
+        'viewPath' => '@backend\\views\\gioi-thieu'
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '1'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'obfot8335aiev0oqal8t3qmrq4'
+    '_csrf' => '098ac81d988bf13a9b7eaa93a240daeb468d85f63546116d0dd9405628321208a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4px6Op008ZznGRYM_t-jNRlL2FZNqYlg\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/Study/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/Study/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:7777'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '571'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:7777'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:7777/minhdoan/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=obfot8335aiev0oqal8t3qmrq4; _csrf=098ac81d988bf13a9b7eaa93a240daeb468d85f63546116d0dd9405628321208a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224px6Op008ZznGRYM_t-jNRlL2FZNqYlg%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19 Server at localhost Port 7777</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win32) OpenSSL/0.9.8y PHP/5.4.19'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '7777'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Study/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/Study/xampp/htdocs/minhdoan/frontend/web/index.php'
+    'REMOTE_PORT' => '49926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/minhdoan/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/minhdoan/frontend/web/index.php'
+    'PHP_SELF' => '/minhdoan/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1460864144.953
+    'REQUEST_TIME' => 1460864144
+]
