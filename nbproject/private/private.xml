@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Study/xampp/htdocs/minhdoan/frontend/config/main.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/update.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/_search.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/index.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/controllers/GioiThieuController.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/create.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/models/GioiThieu.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/view.php</file>
+            <file>file:/E:/Study/xampp/htdocs/minhdoan/views/gioi-thieu/_form.php</file>
         </group>
     </open-files>
 </project-private>

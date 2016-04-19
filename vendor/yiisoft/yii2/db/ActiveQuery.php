@@ -395,7 +395,7 @@ class ActiveQuery extends Query implements ActiveQueryInterface
     public function joinWith($with, $eagerLoading = true, $joinType = 'LEFT JOIN')
     {
         $relations = [];
-        foreach((array) $with as $name => $callback) {
+        foreach ((array) $with as $name => $callback) {
             if (is_int($name)) {
                 $name = $callback;
                 $callback = null;
@@ -788,5 +788,18 @@ class ActiveQuery extends Query implements ActiveQueryInterface
             }
         }
         return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function exists($db = null)
+    {
+        if ($db === null) {
+            /* @var $modelClass ActiveRecord */
+            $modelClass = $this->modelClass;
+            $db = $modelClass::getDb();
+        }
+        return parent::exists($db);
     }
 }

@@ -576,6 +576,8 @@ class QueryBuilder extends \yii\base\Object
      *
      * - `pk`: an auto-incremental primary key type, will be converted into "int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY"
      * - `bigpk`: an auto-incremental primary key type, will be converted into "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY"
+     * - `unsignedpk`: an unsigned auto-incremental primary key type, will be converted into "int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY"
+     * - `char`: char type, will be converted into "char(1)"
      * - `string`: string type, will be converted into "varchar(255)"
      * - `text`: a long string type, will be converted into "text"
      * - `smallint`: a small integer type, will be converted into "smallint(6)"
@@ -1006,6 +1008,12 @@ class QueryBuilder extends \yii\base\Object
             if (is_array($operand)) {
                 $operand = $this->buildCondition($operand, $params);
             }
+            if ($operand instanceof Expression) {
+                foreach ($operand->params as $n => $v) {
+                    $params[$n] = $v;
+                }
+                $operand = $operand->expression;
+            }
             if ($operand !== '') {
                 $parts[] = $operand;
             }
@@ -1331,5 +1339,17 @@ class QueryBuilder extends \yii\base\Object
             $params[$phName] = $value;
             return "$column $operator $phName";
         }
+    }
+    
+    /**
+     * Creates a SELECT EXISTS() SQL statement.
+     * @param string $rawSql the subquery in a raw form to select from.
+     * @return string the SELECT EXISTS() SQL statement.
+     *
+     * @since 2.0.8
+     */
+    public function selectExists($rawSql)
+    {
+        return 'SELECT EXISTS(' . $rawSql . ')';
     }
 }
